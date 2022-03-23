@@ -85,7 +85,7 @@
       );
 
         async function getGPS() {
-            response = await fetch("ec2-3-85-119-182.compute-1.amazonaws.com:3900/gps");
+            response = await fetch("/gps");
             coordinates = await response.json();
             document.getElementById("LatID").textContent = coordinates.lat;
             document.getElementById("LongID").textContent = coordinates.lon;
